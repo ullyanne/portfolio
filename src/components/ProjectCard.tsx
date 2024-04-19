@@ -19,7 +19,7 @@ export function ProjectCard({ id, title, description, technologies }: ProjectCar
         </a>
       </div>
       <img className="rounded-md" src={img} alt="Café" />
-      <p className="text-base h-28">{description}</p>
+      <p className="text-base max-[320px]:h-36 h-32 md:h-32 lg:h-40 xl:h-28">{description}</p>
       <div>
         <ul className="text-sm flex gap-3 items-center flex-wrap">
           {technologies.map((tech, i) => {
