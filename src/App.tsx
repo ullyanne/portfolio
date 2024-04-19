@@ -6,6 +6,7 @@ import { Projects } from './components/Projects'
 import { getProjects } from './services/ProjectsServices'
 import { JobsResponse, ProjectsResponse } from './services/ServicesTypes'
 import { getJobs } from './services/JobsServices'
+import { Footer } from './components/Footer'
 
 export default function App() {
   const [projects, setProjects] = useState<ProjectsResponse[]>([])
@@ -22,6 +23,7 @@ export default function App() {
       <Presentation />
       <Projects projects={projects} />
       <Experience jobs={jobs}/>
+      <Footer />
     </>
   )
 }
