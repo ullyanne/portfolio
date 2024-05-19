@@ -9,7 +9,7 @@ export function Projects({ projects }: ProjectsProps) {
   return (
     <div className='flex justify-around flex-wrap'>
       <div>
-        <h2 id="Projetos" className='text-2xl font-medium text-slate-200 pl-5 pb-4'>Projetos</h2>
+        <h2 id="Projetos" className='text-2xl font-medium text-slate-200 pl-5 pb-6'>Projetos</h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 grid-flow-row px-5'>
           {projects.map((project) => {
