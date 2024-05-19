@@ -13,6 +13,7 @@ import doctorsEdit from '../assets/projects_img/inpaciente/doctors/doctors-edit.
 import swagger from '../assets/projects_img/inpaciente/swagger/swagger.png'
 import { Footer } from './Footer'
 import { Fragment } from 'react'
+import { Link } from 'lucide-react';
 
 export function InPaciente() {
   const tech = ["Typescript", "ReactJS", "NodeJS", "Fastify", "Prisma ORM", "Postgres", "Docker", "Tailwind"]
@@ -24,9 +25,14 @@ export function InPaciente() {
         <div>
           <img className='rounded-t-md object-none object-left-top' src={img} alt="" />
           <div className='pt-8 pl-10 pr-10'>
-            <h1 className="text-5xl font-bold justify-left flex pb-3 text-slate-200" >
-              <a href="https://inpaciente.vercel.app/">InPaciente: Gerenciador de clínicas médicas</a>
-            </h1>
+            <div className="flex pb-3 text-slate-200 " >
+              <span className='text-5xl font-bold justify-left'>
+                <a target='_blank' href="https://inpaciente.vercel.app/">
+                  InPaciente: Gerenciador de clínicas médicas
+                  <Link className='inline-block ml-2 text-slate-400 hover:text-slate-300 transition ease-out' strokeWidth={2.75} size={28} />
+                </a>
+              </span>
+            </div>
             <span className=''>Projeto FullStack</span>
             {tech.map((t, index) => (
               <Fragment key={index}>
