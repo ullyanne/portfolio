@@ -1,25 +1,36 @@
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import img from '../assets/projects_img/01.jpg'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
+import inpacienteThumbnail from '../assets/projects_img/inpaciente/thumbnail.png'
 
 export interface ProjectCardProps {
   id: number
   title: string
   description: string
   technologies: string[]
+  site: string
 }
 
-export function ProjectCard({ id, title, description, technologies }: ProjectCardProps) {
+export function ProjectCard({ id, title, description, technologies, site }: ProjectCardProps) {
+  const projectsComponents: { [key: number]: string } = {
+    1: '/projects/inpaciente'
+  };
+
+  const projectsImages: { [key: number]: string } = {
+    1: inpacienteThumbnail
+  };
+
   return (
-    <button className="select-text rounded-md outline-none focus:ring-2 focus:ring-sky-300/80 focus-visible:ring-sky-300/80 text-left bg-[#162038] space-y-4 p-5 max-w-96 h-auto ">
+    <Link reloadDocument to={projectsComponents[id]} className="select-text rounded-md outline-none focus:ring-2 focus:ring-sky-300/80 focus-visible:ring-sky-300/80 text-left bg-[#162038] space-y-4 p-5 max-w-96 h-auto ">
       <div className='flex justify-between'>
         <h3 className="text-xl font-semibold text-slate-200">{title}</h3>
-        <a target="_blank" className="hover:text-slate-300 transition ease-in-out focus-visible:ring-sky-300/80 focus:ring-2 outline-none" href="">
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg'/>
+        <a target="_blank" className="hover:text-slate-300 transition ease-in-out focus-visible:ring-sky-300/80 focus:ring-2 outline-none" href={site} onClick={(e) => (e.stopPropagation())}>
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' />
         </a>
       </div>
-      <img className="rounded-md" src={img} alt="Café" />
-      <p className="text-base max-[320px]:h-36 h-32 md:h-32 lg:h-40 xl:h-28">{description}</p>
+      <img className="rounded-md" src={projectsImages[id]} alt="" />
+      <p className="text-base max-[320px]:h-36 h-36 md:h-32 lg:h-32 xl:h-32 text-justify">{description}</p>
       <div>
         <ul className="text-sm flex gap-3 items-center flex-wrap">
           {technologies.map((tech, i) => {
@@ -27,6 +38,6 @@ export function ProjectCard({ id, title, description, technologies }: ProjectCar
           })}
         </ul>
       </div>
-    </button>
+    </Link>
   )
 }

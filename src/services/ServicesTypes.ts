@@ -12,4 +12,5 @@ export type ProjectsResponse = {
   title: string
   description: string
   technologies: string[]
+  site: string
 }
