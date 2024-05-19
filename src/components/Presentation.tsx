@@ -4,7 +4,7 @@ import img from '../assets/profile-picture.png'
 
 export function Presentation() {
   return (
-    <div className="h-[91vh] md:h-[72vh] lg:h-[80vh] xl:h-[75vh] min-[2560px]:h-[60vh]">
+    <div className="h-[91vh] md:h-[72vh] lg:h-[80vh] xl:h-[78vh] min-[2560px]:h-[76vh]">
       <header className="md:mt-40 flex justify-center flex-wrap md:px-2 px-4">
         <div className="max-w-[370px] pt-24">
           <h2 className="text-sm font-mono text-sky-400">Olá, me chamo</h2>
