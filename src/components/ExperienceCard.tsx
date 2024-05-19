@@ -10,7 +10,7 @@ export interface ExperienceCardProps {
 
 export function ExperienceCard({ id, job_title, company, company_url, job_description, job_duration, is_last }: ExperienceCardProps) {
   return (
-    <div className={"pb-5 max-w-3xl  " + (is_last ? "" : "border-b border-slate-800/70")}>
+    <div key={id} className={"pb-5 max-w-3xl  " + (is_last ? "" : "border-b border-slate-800/70")}>
       <h3 className="text-xl font-semibold text-slate-200">{job_title}</h3>
 
       <div>
