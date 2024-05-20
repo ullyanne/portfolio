@@ -14,7 +14,7 @@ export function Presentation() {
         <img src={img} alt="Ullyanne Freire" className='object-scale-down w-72 m-6 md:m-4 ml-8' />
       </header>
 
-      <div className="flex justify-center s23:mt-1 mt-12 md:mt-24 lg:mt-32 2xl:mt-60">
+      <div className="flex justify-center [@media(max-height:740px)]:mt-1 mt-12 md:mt-24 lg:mt-32 2xl:mt-60">
         <a href="#Projetos">
           <FontAwesomeIcon className="animate-bounce" icon={faChevronDown} size="xl" />
         </a>
