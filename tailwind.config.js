@@ -14,9 +14,6 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter var', 'ui-sans-serif', 'system-ui']
       },
-      screens: {
-        's23': {'raw': '(max-height: 740px)'}
-      },
     },
   },
   plugins: [],
