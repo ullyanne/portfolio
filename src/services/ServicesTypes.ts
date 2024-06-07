@@ -14,3 +14,7 @@ export type ProjectsResponse = {
   technologies: string[]
   site: string
 }
+
+export type LinksResponse = {
+  resume: string
+}
