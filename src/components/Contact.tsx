@@ -13,11 +13,11 @@ export function Contact(){
         <p className="text-lg py-2"> Estou disponível para novas oportunidades 🙂</p>
         <ul className="flex flex-row justify-center gap-10 mt-3 text-slate-400 ">
           <li className="hover:text-slate-300 transition ease-in-out">
-            <a target="_blank" href="mailto:ujfp@ic.ufal.br">
+            <a target="_blank" href="mailto:ullyanne.freire@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} fontSize="2.1em" />
             </a>
           </li>
-          
+
           <li className="hover:text-slate-300 transition ease-in-out">
             <a target="_blank" href="https://www.linkedin.com/in/ullyanne-patriota/">
               <FontAwesomeIcon icon={faLinkedin} fontSize="2.1em" />
